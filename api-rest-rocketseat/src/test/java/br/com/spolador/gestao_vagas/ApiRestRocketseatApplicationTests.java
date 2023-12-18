@@ -1,4 +1,4 @@
-package br.com.spolador.apirestrocketseat;
+package br.com.spolador.gestao_vagas;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

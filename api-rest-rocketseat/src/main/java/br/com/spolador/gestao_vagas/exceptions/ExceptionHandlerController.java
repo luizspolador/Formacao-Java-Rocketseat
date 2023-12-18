@@ -1,6 +1,5 @@
-package br.com.spolador.apirestrocketseat.exceptions;
+package br.com.spolador.gestao_vagas.exceptions;
 
-import org.apache.tomcat.jni.Error;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.http.HttpStatus;
@@ -16,6 +15,7 @@ import java.util.List;
 public class ExceptionHandlerController {
     private MessageSource messageSource;
 
+    //importante criar o construtor para que não haja a possibilidade do messageSource ser nulo
     public ExceptionHandlerController (MessageSource message){
         this.messageSource = message;
     }
