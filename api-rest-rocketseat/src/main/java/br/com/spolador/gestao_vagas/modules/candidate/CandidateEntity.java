@@ -1,24 +1,27 @@
-package br.com.spolador.apirestrocketseat.modules.candidate;
+package br.com.spolador.gestao_vagas.modules.candidate;
 
 import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.validator.constraints.Length;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
-import java.util.UUID;
+import java.time.LocalDateTime;
 
 @Entity
-@Data
+@Table(name = "candidates")
+@Data // cria os getters and setters
 public class CandidateEntity {
     @Id
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @NotBlank(message = "o campo nome não deve ser vazio")
     private String name;
 
+    @NotBlank
     @Pattern(regexp = "\\S+", message = "o campo username não deve conter espaço")
     private String username;
 
@@ -31,4 +34,6 @@ public class CandidateEntity {
     private String description;
     private String curriculum;
 
+    @CreationTimestamp
+    private LocalDateTime createdAt;
 }

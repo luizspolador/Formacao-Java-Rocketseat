@@ -1,4 +1,4 @@
-package br.com.spolador.apirestrocketseat;
+package br.com.spolador.gestao_vagas;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

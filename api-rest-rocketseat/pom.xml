@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.spolador</groupId>
-	<artifactId>api-rest-rocketseat</artifactId>
+	<artifactId>gestao_vagas</artifactId>
 	<version>0.0.1</version>
-	<name>api-rest-rocketseat</name>
+	<name>gestao_vagas</name>
 	<description>Projeto desenvolvido durante a trilha de Java da Rocketseat</description>
 	<properties>
 		<java.version>11</java.version>
@@ -50,9 +50,15 @@
 			<optional>true</optional>
 		</dependency>
 
+<!--		<dependency>-->
+<!--			<groupId>org.postgresql</groupId>-->
+<!--			<artifactId>postgresql</artifactId>-->
+<!--			<scope>runtime</scope>-->
+<!--		</dependency>-->
+
 		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 	</dependencies>

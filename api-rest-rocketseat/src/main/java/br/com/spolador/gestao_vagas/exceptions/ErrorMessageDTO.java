@@ -1,4 +1,4 @@
-package br.com.spolador.apirestrocketseat.exceptions;
+package br.com.spolador.gestao_vagas.exceptions;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
