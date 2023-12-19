@@ -1,4 +1,4 @@
-package br.com.spolador.gestao_vagas.modules.candidate;
+package br.com.spolador.gestao_vagas.entities;
 
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
@@ -11,28 +11,23 @@ import javax.validation.constraints.Pattern;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "candidates")
-@Data // cria os getters and setters
-public class CandidateEntity {
+@Table(name = "companies")
+@Data
+public class CompanyEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @NotBlank(message = "o campo nome não deve ser vazio")
-    private String name;
-
     @NotBlank
     @Pattern(regexp = "\\S+", message = "o campo username não deve conter espaço")
     private String username;
-
     @Email(message = "O campo deve conter um e-mail valido")
     private String email;
-
     @Length(min = 8, max = 14, message = "A senha deve conter entre 8 e 14 caracteres")
     private String password;
-
+    private String website;
+    @NotBlank(message = "o campo nome não deve ser vazio")
+    private String name;
     private String description;
-    private String curriculum;
 
     @CreationTimestamp
     private LocalDateTime createdAt;
