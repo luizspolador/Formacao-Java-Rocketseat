@@ -1,4 +1,4 @@
-package br.com.spolador.gestao_vagas.execptions;
+package br.com.spolador.gestao_vagas.exceptions;
 
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
